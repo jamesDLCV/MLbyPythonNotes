@@ -41,9 +41,11 @@ print()
 ## Slicing 슬라이싱
 array1 = np.arange(start=1, stop=10)
 print(array1)                   # [1 2 3 4 5 6 7 8 9]
+
 array3 = array1[0:3]
 print(array3)                   # [1 2 3]
-print(type(array3))           # <class 'numpy.ndarray'>
+
+print(type(array3))             # <class 'numpy.ndarray'>
 print()
 
 array1 = np.arange(start=1, stop=10)
@@ -84,6 +86,7 @@ print('array2d[:, :] \n', array2d[:, :])
 #  [[1 2 3]
 #  [4 5 6]
 #  [7 8 9]]
+
 print('array2d[:2, 1:] \n', array2d[:2, 1:])
 # array2d[:2, 1:]
 #  [[2 3]
@@ -127,6 +130,7 @@ print(array1d > 5)
 var1 = array1d > 5
 print('var1: ', var1)
 # var1:  [False False False False False  True  True  True  True]
+
 print(type(var1))
 # <class 'numpy.ndarray'>
 print()
@@ -145,11 +149,13 @@ print('boolean index로 필터링 결과: ', array3)
 # boolean index로 필터링 결과:  [6 7 8 9]
 
 indexes = np.array([5, 6, 7, 8])
-print(indexes)                                              # [5 6 7 8]
+print(indexes)                                       # [5 6 7 8]
+
 array4 = array1d[ indexes ]                          # index 5, 6, 7, 8 출력
 print('일반 인덱스로 필터링 결과: ', array4)
 # 일반 인덱스로 필터링 결과:  [6 7 8 9]
 print()
+
 array1d = np.arange(start=1, stop=10)
 target = []
 
@@ -158,7 +164,8 @@ for i in range(0, 9):
         target.append(array1d[i])
 
 array_selected = np.array(target)
-print(array_selected)                                   # [6 7 8 9]
+print(array_selected)                                # [6 7 8 9]
+
 print(array1d[array1 > 5])                           # [6 7 8 9], loop로 append한 위 값과 동일
 # 불리언 인덱싱를 쓰면 간단하게 값을 구할 수 있다.
 
